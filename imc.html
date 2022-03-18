@@ -1,0 +1,49 @@
+<meta charset="UTF-8"> 
+
+<script>
+    
+// PROGRAMA CALCULO DE IMC
+
+function pulaLinha() { // função para organização do conteudo na tela
+    
+    document.write("<br><br>");
+
+}
+
+function mostra(frase) { // função para apresentação de informação ao usuário final
+    
+    document.write(frase);
+    pulaLinha();
+        
+}
+
+function calculaImc(altura, peso) { // FUNÇÃO DO CALCULO
+
+    return peso / (altura * altura);
+}
+    var alturaInformada = parseFloat(prompt("digite sua altura"));
+    var pesoInformado = parseFloat(prompt("digite o seu peso"));
+    var imc = calculaImc(alturaInformada, pesoInformado);
+
+    mostra("O IMC calculado é  de: " + imc); 
+    
+
+//FUNÇÃO CONDICIONAL - mostra informações sobre resultado do IMC (obesidade, sobrepeso ou normal)
+
+if(imc > 29) {
+  
+    mostra("obesidade");
+} 
+
+if(imc == 29) {
+  
+    mostra("sobrepeso");
+}
+
+if(imc < 29) {
+   
+    mostra("IMC é normal");
+}
+
+
+</script>  
